@@ -1,21 +1,10 @@
-#!/usr/bin/env python3
-
 def print_fibonacci(length):
-    if length == 0:
-        fib_sequence = []
-    elif length == 1:
-        fib_sequence = [0]
-    else:
-        fib_sequence = [0, 1]
-
-        while len(fib_sequence) < length:
-            next_fib = fib_sequence[-1] + fib_sequence[-2]
-            fib_sequence.append(next_fib)
-    
-    print(fib_sequence)
-
-# Test the function
-print_fibonacci(0)
-print_fibonacci(1)
-print_fibonacci(2)
-print_fibonacci(10)
+    pass
+    fibonacci_sequence = []
+    if length > 0:
+       fibonacci_sequence.append(0)
+    if length >= 2:
+       fibonacci_sequence.append(1)
+    for i in range(2, length):
+       fibonacci_sequence.append(fibonacci_sequence[-1] + fibonacci_sequence[-2])
+    print(fibonacci_sequence)
